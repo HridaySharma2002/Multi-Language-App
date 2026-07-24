@@ -1,0 +1,10 @@
+{
+  "app.title": "Global Ready Application",
+  "section.intro.heading": "Introduction",
+  "section.intro.description": "This application demonstrates advanced internationalization techniques including ICU MessageFormat, dynamic bundle loading, and deterministic fallbacks.",
+  "section.plurals.heading": "Dynamic Plurals & Content",
+  "message.unread_count": "{count, plural, =0 {You have no new messages.} one {You have 1 new message.} other {You have # new messages.}}",
+  "section.formatting.heading": "Data Formatting",
+  "label.price": "Product Price",
+  "label.date": "Current Date"
+}

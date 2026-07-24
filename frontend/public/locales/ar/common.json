@@ -1,0 +1,10 @@
+{
+  "app.title": "تطبيق جاهز عالمياً",
+  "section.intro.heading": "مقدمة",
+  "section.intro.description": "يوضح هذا التطبيق تقنيات التدويل المتقدمة بما في ذلك تنسيق رسائل ICU، وتحميل الحزم الديناميكي، والتراجعات الحتمية.",
+  "section.plurals.heading": "الجموع الديناميكية",
+  "message.unread_count": "{count, plural, =0 {ليس لديك رسائل جديدة.} one {لديك رسالة جديدة واحدة.} two {لديك رسالتان جديدتان.} few {لديك # رسائل جديدة.} many {لديك # رسالة جديدة.} other {لديك # رسالة جديدة.}}",
+  "section.formatting.heading": "تنسيق البيانات",
+  "label.price": "سعر المنتج",
+  "label.date": "التاريخ الحالي"
+}

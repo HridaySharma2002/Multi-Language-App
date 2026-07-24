@@ -1,0 +1,10 @@
+{
+  "app.title": "Application Prête pour le Monde",
+  "section.intro.heading": "Introduction",
+  "section.intro.description": "Cette application démontre des techniques d'internationalisation avancées, notamment ICU MessageFormat, le chargement dynamique des bundles et les replis déterministes.",
+  "section.plurals.heading": "Pluriels Dynamiques",
+  "message.unread_count": "{count, plural, =0 {Vous n'avez aucun nouveau message.} one {Vous avez 1 nouveau message.} other {Vous avez # nouveaux messages.}}",
+  "section.formatting.heading": "Formatage des Données",
+  "label.price": "Prix du produit",
+  "label.date": "Date actuelle"
+}

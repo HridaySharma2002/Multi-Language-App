@@ -1,0 +1,10 @@
+{
+  "app.title": "Aplicación Lista para el Mundo",
+  "section.intro.heading": "Introducción",
+  "section.intro.description": "Esta aplicación demuestra técnicas avanzadas de internacionalización, incluyendo el formato de mensajes ICU, la carga dinámica de paquetes y las alternativas deterministas.",
+  "section.plurals.heading": "Plurales Dinámicos",
+  "message.unread_count": "{count, plural, =0 {No tienes mensajes nuevos.} one {Tienes 1 mensaje nuevo.} other {Tienes # mensajes nuevos.}}",
+  "section.formatting.heading": "Formato de Datos",
+  "label.price": "Precio del producto",
+  "label.date": "Fecha actual"
+}
