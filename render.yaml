@@ -1,0 +1,34 @@
+services:
+  # Backend Spring Boot Service
+  - type: web
+    name: multi-language-backend
+    env: docker
+    region: frankfurt
+    plan: free
+    rootDir: backend
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/greeting
+    envVars:
+      - key: PORT
+        value: 8080
+
+  # Frontend React App (Static Site for fast CDN delivery)
+  - type: web
+    name: multi-language-frontend
+    env: static
+    region: frankfurt
+    plan: free
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    publishPath: dist
+    routes:
+      # Handle React Router fallback
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: VITE_API_URL
+        fromService:
+          type: web
+          name: multi-language-backend
+          envVarKey: RENDER_EXTERNAL_URL

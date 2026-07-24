@@ -4,6 +4,7 @@ import './index.css';
 
 function App() {
   const { t, i18n } = useTranslation();
+  const [greeting, setGreeting] = useState('');
   const [messagesCount, setMessagesCount] = useState(0);
 
   const changeLanguage = (lng: string) => {
@@ -12,6 +13,17 @@ function App() {
 
   useEffect(() => {
     document.documentElement.dir = i18n.dir();
+    
+    // Fetch data from backend API
+    const apiUrl = import.meta.env.VITE_API_URL || '';
+    fetch(`${apiUrl}/api/greeting`, {
+      headers: {
+        'Accept-Language': i18n.language
+      }
+    })
+      .then(res => res.json())
+      .then(data => setGreeting(data.message))
+      .catch(console.error);
   }, [i18n, i18n.language]);
 
   const price = 1234.56;
@@ -21,6 +33,9 @@ function App() {
     <div className="container">
       <header>
         <h1>{t('app.title')}</h1>
+        <div className="backend-greeting" style={{ marginTop: '10px', fontSize: '1.2rem', color: '#646cff' }}>
+          {greeting ? `Backend says: ${greeting}` : 'Loading backend message...'}
+        </div>
         <div className="language-selector">
           <button onClick={() => changeLanguage('en')}>English</button>
           <button onClick={() => changeLanguage('fr')}>Français</button>
