@@ -1,7 +1,7 @@
 services:
   # Backend Spring Boot Service
   - type: web
-    name: multi-language-backend
+    name: multilang-backend-hriday
     env: docker
     region: frankfurt
     plan: free
@@ -14,7 +14,7 @@ services:
 
   # Frontend React App (Static Site for fast CDN delivery)
   - type: web
-    name: multi-language-frontend
+    name: multilang-frontend-hriday
     env: static
     region: frankfurt
     plan: free
@@ -30,5 +30,5 @@ services:
       - key: VITE_API_URL
         fromService:
           type: web
-          name: multi-language-backend
+          name: multilang-backend-hriday
           envVarKey: RENDER_EXTERNAL_URL
